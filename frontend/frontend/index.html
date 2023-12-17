@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your API Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Learner</h1>
+
+<button id="login-btn">Login</button>
+<button id="register-btn">Register</button>
+<button id="logout-btn" style="display: none;">Logout</button>
+
+
+        <div id="login-container" style="display: none;">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div id="register-container" style="display: none;">
+            <h2>Register</h2>
+            <form id="register-form" >
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="reg-username" required>
+
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="reg-password" required>
+
+                <button type="button" onclick="register()">Register</button>
+            </form>
+        </div>
+        <div id="language-container" style="display: none; float: right;">
+            <h2>Select Language</h2>
+            <select id="language-select"></select>
+        </div>
+    </div>
+    <div id="quiz-container">
+        <form id="quiz-form">
+            <div id="questions-container"></div>
+            <div id="options-container"></div>
+            <button type="button" id="hello" onclick="submitQuiz(event)">Submit Quiz</button>
+        </form>
+    </div>
+    <div id="result-container" style="display: none;">
+        <h2>Quiz Result</h2>
+        <p id="score-display"></p>
+    </div>    
+    <script src="script.js"></script>
+    
+</body>
+</html>
